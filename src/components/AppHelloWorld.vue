@@ -6,7 +6,6 @@
 
 <script>
 ***REMOVED***
-  name: "HelloWorld",
   props: {
     msg: String,
     color: String
