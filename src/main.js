@@ -4,11 +4,12 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import axios from "./plugins/axios";
+import plugins from "./imports";
 import "./assets/tailwind.css";
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .use(axios)
-  .mount("#app");
+const app = createApp(App);
+
+app.use(store);
+app.use(router);
+app.use(plugins);
+app.mount("#app");
