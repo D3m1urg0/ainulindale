@@ -1,18 +1,20 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" class="mx-auto" />
-    <HelloWorld msg="Welcome to Your Vue.js App" color="red" />
+    <app-hello-world msg="Welcome to Your Vue.js App" color="red" />
+    <button @click="call">call</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 ***REMOVED***
   name: "Home",
-  components: {
-    HelloWorld
+  methods: {
+    call() {
+      this.axios.get("test");
+  ***REMOVED***
 ***REMOVED***
 ***REMOVED***
 </script>
