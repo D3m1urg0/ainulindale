@@ -4,7 +4,6 @@
     <app-hello-world msg="Welcome to Your Vue.js App" color="red" />
     <div class="flex flex-col">
       <button @click="call">call</button>
-      <button @click="chiama">chiamata</button>
     </div>
   </div>
 </template>
