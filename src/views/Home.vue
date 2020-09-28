@@ -2,19 +2,22 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" class="mx-auto" />
     <app-hello-world msg="Welcome to Your Vue.js App" color="red" />
-    <button @click="call">call</button>
+    <div class="flex flex-col">
+      <button @click="call">call</button>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import axios from "@/plugins/axios";
 export default {
   name: "Home",
-  methods: {
-    call() {
-      this.axios.get("test");
-    }
+  setup() {
+    const call = function() {
+      axios.get("test");
+    };
+    return { call };
   }
 };
 </script>
