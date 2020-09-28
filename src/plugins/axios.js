@@ -7,6 +7,7 @@ import axios from "axios";
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
+  baseURL: "fakeurlTEst"
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
   // timeout: 60 * 1000, // Timeout
   // withCredentials: true, // Check cross-site Access-Control
@@ -37,21 +38,22 @@ _axios.interceptors.response.use(
 ***REMOVED***
 );
 
-Plugin.install = function(Vue /*, options*/) {
-  Vue.axios = _axios;
-  window.axios = _axios;
-  Object.defineProperties(Vue.config.globalProperties, {
-    axios: {
-      get() {
-        return _axios;
-    ***REMOVED***
-  ***REMOVED***,
-    $axios: {
-      get() {
-        return _axios;
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***);
-***REMOVED***
+// Plugin.install = function(Vue /*, options*/) {
+//   Vue.axios = _axios;
+//   window.axios = _axios;
+//   Object.defineProperties(Vue.config.globalProperties, {
+//     axios: {
+//       get() {
+//         return _axios;
+//     ***REMOVED***
+//   ***REMOVED***,
+//     $axios: {
+//       get() {
+//         return _axios;
+//     ***REMOVED***
+//   ***REMOVED***
+// ***REMOVED***);
+// ***REMOVED***
 
-export default Plugin;
+// export default Plugin;
+export default _axios;
