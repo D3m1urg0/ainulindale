@@ -1,26 +1,26 @@
-import { ValidationProvider, ValidationObserver, extend } from "vee-validate";
+import { Field, Form, ErrorMessage } from "vee-validate";
 
-import * as rules from "vee-validate/dist/rules";
-import { messages } from "vee-validate/dist/locale/it.json";
+import { defineRule, configure } from "vee-validate";
+import * as rules from "@vee-validate/rules";
+import { localize } from "@vee-validate/i18n";
+import it from "@vee-validate/i18n/dist/locale/it.json";
 
 Plugin.install = function(app /*, options*/) {
-  Object.keys(rules).forEach(rule => {
-    extend(rule, {
-      ...rules[rule], // copies rule configuration
-      message: messages[rule] // assign message
-    });
+  configure({
+    generateMessage: localize({
+      it
+    })
   });
 
-  // Add a rule.
-  // extend('secret', {
-  //   validate: value => value === 'example',
-  //   message: 'This is not the magic word'
-  // });
+  /* Dettagliare */
+  Object.keys(rules).forEach(rule => {
+    defineRule(rule, rules[rule]);
+  });
 
-  // Register it globally
   app
-    .component("ValidationProvider", ValidationProvider)
-    .component("ValidationObserver", ValidationObserver);
+    .component("v-field", Field)
+    .component("v-form", Form)
+    .component("error-message", ErrorMessage);
 };
 
 export default Plugin;
