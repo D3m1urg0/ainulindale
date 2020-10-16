@@ -69,7 +69,7 @@ import { useField } from "vee-validate";
 ***REMOVED***
 </script>
 
-<style scoped>
+<style>
 .TextInput {
   position: relative;
   margin-bottom: calc(1em * 1.5);
