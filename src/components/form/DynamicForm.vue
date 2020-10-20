@@ -4,14 +4,18 @@
     :validation-schema="schema.validation"
     :initial-values="schema.values"
   >
-    <text-input
-      name="CustomImputName"
+    <component
+      v-for="{ name, as, label, ...attrs } in schema.fields"
+      :key="name"
+      :is="as === 'input' ? 'TextInput' : 'TextInput'"
+      :id="name"
+      :name="name"
       type="text"
-      label="Full Name (custom input)"
-      placeholder="Your Name"
+      :label="label"
+      :placeholder="attrs.placeholder || name"
       success-message="Nice to meet you!"
     />
-    <hr />
+    <!-- <hr />
     <h2>automatic fileds</h2>
     <div
       v-for="{ name, as, label, children, ...attrs } in schema.fields"
@@ -24,6 +28,7 @@
             v-for="({ tag, text, ...childAttrs }, idx) in children"
             :key="idx"
             :is="tag"
+            :placeholder="childAttrs.placeholder || name"
             v-bind="childAttrs"
           >
             {{ text }}
@@ -31,13 +36,13 @@
         </template>
       </v-field>
       <error-message :name="name"></error-message>
-    </div>
+    </div> -->
 
     <button class="submit-btn" type="submit">Submit</button>
   </v-form>
 </template>
 <script>
-import * as Yup from "yup";
+import * as yup from "yup";
 import TextInput from "./fields/TextInput";
 export default {
   components: { TextInput },
@@ -46,13 +51,17 @@ export default {
       alert(JSON.stringify(values, null, 2));
     }
 
-    // Using yup to generate a validation schema
-    // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
     const schema = {
       fields: [
         {
           label: "Name",
           name: "name",
+          as: "input",
+          placeholder: "Nome"
+        },
+        {
+          label: "Surname",
+          name: "surname",
           as: "input"
         },
         {
@@ -63,21 +72,26 @@ export default {
         {
           label: "Password",
           name: "password",
-          as: "input"
+          as: "input",
+          type: "password"
         }
       ],
-      validation: Yup.object().shape({
-        email: Yup.string()
+      validation: yup.object().shape({
+        email: yup
+          .string()
           .email()
           .required(),
-        name: Yup.string().required(),
-        password: Yup.string()
+        name: yup.string().required(),
+        surname: yup.string().required(),
+        password: yup
+          .string()
           .min(8)
           .required()
       }),
       values: {
         email: "example@example.com",
-        name: "John Smith",
+        name: "John",
+        surname: "Smith",
         password: "p@$$vv0rd"
       }
     };
@@ -89,14 +103,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-span {
-  display: block;
-  margin: 10px 0;
-}
-
-label {
-  display: block;
-}
-</style>
