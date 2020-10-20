@@ -55,7 +55,7 @@ import { useField } from "vee-validate";
       handleChange,
       meta
   ***REMOVED*** = useField(props.name, undefined, {
-      initialValue: props.value
+      // initialValue: props.value
 ***REMOVED***
 
     return {
