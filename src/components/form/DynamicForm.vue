@@ -5,15 +5,16 @@
     :initial-values="schema.values"
   >
     <component
-      v-for="{ name, as, label, ...attrs } in schema.fields"
+      v-for="{ name, as, label, type, ...attrs } in schema.fields"
       :key="name"
       :is="as === 'input' ? 'TextInput' : 'TextInput'"
       :id="name"
       :name="name"
-      type="text"
+      :type="type"
       :label="label"
       :placeholder="attrs.placeholder || name"
       success-message="Nice to meet you!"
+      :class="attrs.class"
     />
     <!-- <hr />
     <h2>automatic fileds</h2>
@@ -74,6 +75,13 @@ export default {
           name: "password",
           as: "input",
           type: "password"
+        },
+        {
+          label: "Hidden field",
+          name: "hiddenfield",
+          as: "input",
+          type: "hidden",
+          class: "hidden"
         }
       ],
       validation: yup.object().shape({
@@ -92,7 +100,8 @@ export default {
         email: "example@example.com",
         name: "John",
         surname: "Smith",
-        password: "p@$$vv0rd"
+        password: "p@$$vv0rd",
+        hiddenfield: "hidden value!"
       }
     };
 
