@@ -4,12 +4,17 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import plugins from "./imports";
+import imports from "./imports";
+// import axios from "./plugins/axios";
+// import veeValidate from "./plugins/vee-validate";
 import "./assets/tailwind.css";
 
-const app = createApp(App);
+import DynamicForm from "./components/form/DynamicForm.vue";
 
-app.use(store);
-app.use(router);
-app.use(plugins);
-app.mount("#app");
+createApp(App)
+  .use(store)
+  .use(router)
+  .use(imports)
+  // .use(veeValidate)
+  .component("DynamicForm", DynamicForm)
+  .mount("#app");
