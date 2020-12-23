@@ -105,6 +105,8 @@ import TextInput from "./fields/TextInput";
     ***REMOVED***
   ***REMOVED***;
 
+    console.log(schema.validation);
+
     return {
       onSubmit,
       schema

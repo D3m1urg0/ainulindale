@@ -7,6 +7,13 @@ module.exports = {
   theme: {
     extend: {}
 ***REMOVED***,
-  variants: {},
-  plugins: []
+  variants: {
+    extend: {
+      fontWeight: ["hover", "focus"]
+  ***REMOVED***
+***REMOVED***,
+  plugins: [
+    require("@tailwindcss/typography")
+    // ...
+  ]
 ***REMOVED***
