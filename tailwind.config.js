@@ -3,10 +3,17 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
 ***REMOVED***,
-  purge: [],
+  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {}
 ***REMOVED***,
-  variants: {},
-  plugins: []
+  variants: {
+    extend: {
+      fontWeight: ["hover", "focus"]
+  ***REMOVED***
+***REMOVED***,
+  plugins: [
+    require("@tailwindcss/typography")
+    // ...
+  ]
 ***REMOVED***
