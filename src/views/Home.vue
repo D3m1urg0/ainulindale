@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" src="../assets/logo.png" class="mx-auto" />
+    <app-hello-world msg="Welcome to Your Vue.js App" color="red" />
+    <div class="flex flex-col">
+      <button @click="call">call</button>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import axios from "@/plugins/axios";
 ***REMOVED***
   name: "Home",
-  components: {
-    HelloWorld
+  setup() {
+    const call = function() {
+      axios.get("test");
+  ***REMOVED***;
+    return { call ***REMOVED***
 ***REMOVED***
 ***REMOVED***
 </script>
