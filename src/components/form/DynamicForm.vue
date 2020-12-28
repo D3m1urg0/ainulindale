@@ -105,8 +105,6 @@ export default {
       }
     };
 
-    console.log(schema.validation);
-
     return {
       onSubmit,
       schema
