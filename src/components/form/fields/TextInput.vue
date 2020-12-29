@@ -30,7 +30,7 @@ import { useField } from "vee-validate";
   ***REMOVED***,
     value: {
       type: String,
-      default: ""
+      required: false
   ***REMOVED***,
     name: {
       type: String,
@@ -40,9 +40,13 @@ import { useField } from "vee-validate";
       type: String,
       required: true
   ***REMOVED***,
+    placeholder: {
+      type: String,
+      required: false
+  ***REMOVED***,
     successMessage: {
       type: String,
-      default: ""
+      required: false
   ***REMOVED***
 ***REMOVED***,
   setup(props) {
@@ -55,7 +59,7 @@ import { useField } from "vee-validate";
       handleChange,
       meta
   ***REMOVED*** = useField(props.name, undefined, {
-      // initialValue: props.value
+      initialValue: props.value
 ***REMOVED***
 
     return {
