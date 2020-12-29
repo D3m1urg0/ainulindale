@@ -30,7 +30,7 @@ export default {
     },
     value: {
       type: String,
-      default: ""
+      required: false
     },
     name: {
       type: String,
@@ -40,9 +40,13 @@ export default {
       type: String,
       required: true
     },
+    placeholder: {
+      type: String,
+      required: false
+    },
     successMessage: {
       type: String,
-      default: ""
+      required: false
     }
   },
   setup(props) {
@@ -55,7 +59,7 @@ export default {
       handleChange,
       meta
     } = useField(props.name, undefined, {
-      // initialValue: props.value
+      initialValue: props.value
     });
 
     return {
