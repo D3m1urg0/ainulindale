@@ -1,10 +1,69 @@
 <template>
-  <DynamicForm />
+  <DynamicForm :schema="schema" />
 </template>
 
 <script>
+import * as yup from "yup";
 ***REMOVED***
-  data: () => ({})
+  setup() {
+    const schema = {
+      fields: [
+        {
+          label: "Name",
+          name: "user.name",
+          as: "input",
+          placeholder: "Nome"
+      ***REMOVED***,
+        {
+          label: "Surname",
+          name: "user.surname",
+          as: "input"
+      ***REMOVED***,
+        {
+          label: "Email",
+          name: "email",
+          as: "input"
+      ***REMOVED***,
+        {
+          label: "Password",
+          name: "password",
+          as: "input",
+          type: "password"
+      ***REMOVED***,
+        {
+          label: "Hidden field",
+          name: "hiddenfield",
+          as: "input",
+          type: "hidden",
+          class: "hidden"
+      ***REMOVED***
+***REMOVED***,
+      validation: yup.object().shape({
+        email: yup
+          .string()
+          .email()
+          .required(),
+        user: yup.object({
+          name: yup.string().required(),
+          surname: yup.string().required()
+      ***REMOVED***),
+        password: yup
+          .string()
+          .min(8)
+          .required()
+    ***REMOVED***),
+      values: {
+        email: "example@example.com",
+        user: { name: "John", surname: "Smith" },
+        password: "p@$$vv0rd",
+        hiddenfield: "hidden value!"
+    ***REMOVED***
+  ***REMOVED***;
+
+    return {
+      schema
+  ***REMOVED***;
+***REMOVED***
 ***REMOVED***
 </script>
 
