@@ -1,0 +1,11 @@
+.schema-row {
+  @apply flex flex-wrap;
+}
+
+.schema-col {
+  @apply flex flex-col items-start flex-auto m-4;
+}
+
+.label--required {
+  @apply text-red-700;
+}
