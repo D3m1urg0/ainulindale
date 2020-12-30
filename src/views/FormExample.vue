@@ -1,67 +1,53 @@
 <template>
-  <DynamicForm :schema="schema" />
+  <!-- <DynamicForm :schema="schema" /> -->
+  <schema-form :schema="schema" v-model:modelValue="userData" />
 </template>
 
 <script>
 import * as yup from "yup";
+import { ref } from "vue";
+
 export default {
   setup() {
-    const schema = {
-      fields: [
+    const schema = [
+      [
         {
-          label: "Name",
-          name: "user.name",
-          as: "input",
-          placeholder: "Nome"
+          validations: yup.string().required(),
+          component: "form-text", //FormText,
+          label: "First Name",
+          model: "firstName",
+          style: "margin-right: 10px"
         },
         {
-          label: "Surname",
-          name: "user.surname",
-          as: "input"
-        },
-        {
-          label: "Email",
-          name: "email",
-          as: "input"
-        },
-        {
-          label: "Password",
-          name: "password",
-          as: "input",
-          type: "password"
-        },
-        {
-          label: "Hidden field",
-          name: "hiddenfield",
-          as: "input",
-          type: "hidden",
-          class: "hidden"
+          validations: yup.string().required(),
+          component: "form-text", //FormText,
+          label: "Last Name",
+          model: "lastName"
         }
       ],
-      validation: yup.object().shape({
-        email: yup
-          .string()
-          .email()
-          .required(),
-        user: yup.object({
-          name: yup.string().required(),
-          surname: yup.string().required()
-        }),
-        password: yup
-          .string()
-          .min(8)
-          .required()
-      }),
-      values: {
-        email: "example@example.com",
-        user: { name: "John", surname: "Smith" },
-        password: "p@$$vv0rd",
-        hiddenfield: "hidden value!"
+      {
+        component: "schema-form", //SchemaForm,
+        model: "subform",
+        schema: [
+          {
+            validations: yup.string().required(),
+            component: "form-text", //FormText,
+            label: "Work address",
+            model: "address"
+          },
+          {
+            validations: yup.string().required(),
+            component: "form-text", //FormText,
+            label: "Work phone",
+            model: "phone"
+          }
+        ]
       }
-    };
-
+    ];
+    const userData = ref({});
     return {
-      schema
+      schema,
+      userData
     };
   }
 };

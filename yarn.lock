@@ -868,6 +868,16 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@formvuelate/plugin-vee-validate#feat/support-nested-forms@^1.0.3":
+  name "@formvuelate/plugin-vee-validate"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@formvuelate/plugin-vee-validate/-/plugin-vee-validate-1.0.3.tgz#a242bbe24e9a8577da215260316fad4e84cf63ab"
+  integrity sha512-nZwAebpXMa2p7jlVsbcKYetRUugfCBQjZoP+ITl/NSIp5IHcFBRxFdW3KoV4hY74VYcHNRwKhfefZn2+zCYV+w==
+
+"@formvuelate/plugin-vee-validate@formvuelate/formvuelate-plugin-vee-validate#feat/support-nested-forms":
+  version "1.0.3"
+  resolved "https://codeload.github.com/formvuelate/formvuelate-plugin-vee-validate/tar.gz/d084d376d96ca1c457f4c6a13caeff9502135807"
+
 "@fullhuman/postcss-purgecss@^2.1.2", "@fullhuman/postcss-purgecss@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.3.0.tgz#50a954757ec78696615d3e118e3fee2d9291882e"
