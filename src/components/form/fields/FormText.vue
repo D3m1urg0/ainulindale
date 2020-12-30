@@ -1,70 +1,61 @@
 <template>
   <div
     class="TextInput"
-    :class="{ 'has-error': !!errorMessage, success: meta.valid }"
+    :class="{
+      'has-error': !!validation.errorMessage,
+      success: validation.meta.valid
+    }"
   >
-    <label :for="name">{{ label }}</label>
+    <label :for="uuid">{{ label }}</label>
     <input
-      :name="name"
-      :id="name"
-      :type="type"
-      :value="inputValue"
-      @input="handleChange"
-      @blur="handleBlur"
+      :value="modelValue"
+      :required="required"
+      :id="uuid"
+      :disabled="readOnly"
+      @input="update($event.target.value)"
     />
-
-    <p class="help-message" v-show="errorMessage || meta.valid">
-      {{ errorMessage || successMessage }}
+    <p
+      class="help-message"
+      v-show="validation.errorMessage || validation.meta.valid"
+    >
+      {{ validation.errorMessage || successMessage }}
     </p>
   </div>
 </template>
 
 <script>
-import { useField } from "vee-validate";
-
 export default {
   props: {
-    type: {
-      type: String,
-      default: "text"
-    },
-    value: {
-      type: String,
-      default: ""
-    },
-    name: {
-      type: String,
-      required: true
+    modelValue: { required: true },
+    required: {
+      type: Boolean,
+      default: false
     },
     label: {
       type: String,
       required: true
     },
-    successMessage: {
-      type: String,
-      default: ""
+    config: {
+      type: Object,
+      default: () => ({ type: "text" })
+    },
+    readOnly: {
+      type: Boolean,
+      default: false
+    },
+    uuid: {
+      type: Number,
+      default: 0
+    },
+    validation: {
+      type: Object,
+      default: () => ({})
     }
   },
-  setup(props) {
-    // we don't provide any rules here because we are using form-level validation
-    // https://vee-validate.logaretm.com/v4/guide/validation#form-level-validation
-    const {
-      value: inputValue,
-      errorMessage,
-      handleBlur,
-      handleChange,
-      meta
-    } = useField(props.name, undefined, {
-      // initialValue: props.value
-    });
-
-    return {
-      handleChange,
-      handleBlur,
-      errorMessage,
-      inputValue,
-      meta
-    };
+  methods: {
+    update(value) {
+      this.$emit("update:modelValue", value);
+    }
   }
 };
 </script>
