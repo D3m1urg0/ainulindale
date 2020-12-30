@@ -1,4 +1,6 @@
 # ainulindale
+Just my own enviornment for any future fresh-start vue 3 project
+
 
 ## Project setup
 ```
