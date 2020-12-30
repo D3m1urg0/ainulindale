@@ -1,12 +1,12 @@
 <template>
   <div>
-    <label :for="label">
+    <label :for="uuid">
       {{ label }}
     </label>
     <select
       :value="modelValue"
       :required="required"
-      :id="label"
+      :id="uuid"
       @input="update($event.target.value)"
     >
       <option v-if="!disableNoSelection">-</option>
@@ -33,6 +33,10 @@
     config: {
       type: Object,
       default: () => {}
+  ***REMOVED***,
+    uuid: {
+      type: Number,
+      default: 0
   ***REMOVED***,
     label: { type: String, required: true },
     options: { type: Array, required: true },

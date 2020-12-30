@@ -13,7 +13,9 @@ module.exports = {
   ***REMOVED***
 ***REMOVED***,
   plugins: [
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms")
+
     // ...
   ]
 ***REMOVED***
