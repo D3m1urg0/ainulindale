@@ -1,10 +1,55 @@
 <template>
-  <DynamicForm />
+  <!-- <DynamicForm :schema="schema" /> -->
+  <schema-form :schema="schema" v-model:modelValue="userData" />
 </template>
 
 <script>
+import * as yup from "yup";
+import { ref } from "vue";
+
 ***REMOVED***
-  data: () => ({})
+  setup() {
+    const schema = [
+      [
+        {
+          validations: yup.string().required(),
+          component: "form-text", //FormText,
+          label: "First Name",
+          model: "firstName",
+          style: "margin-right: 10px"
+      ***REMOVED***,
+        {
+          validations: yup.string().required(),
+          component: "form-text", //FormText,
+          label: "Last Name",
+          model: "lastName"
+      ***REMOVED***
+***REMOVED***,
+      {
+        component: "schema-form", //SchemaForm,
+        model: "subform",
+        schema: [
+          {
+            validations: yup.string().required(),
+            component: "form-text", //FormText,
+            label: "Work address",
+            model: "address"
+        ***REMOVED***,
+          {
+            validations: yup.string().required(),
+            component: "form-text", //FormText,
+            label: "Work phone",
+            model: "phone"
+        ***REMOVED***
+  ***REMOVED***
+    ***REMOVED***
+    ];
+    const userData = ref({});
+    return {
+      schema,
+      userData
+  ***REMOVED***;
+***REMOVED***
 ***REMOVED***
 </script>
 
