@@ -15,9 +15,7 @@
   </v-form>
 </template>
 <script>
-import TextInput from "./fields/TextInput";
 ***REMOVED***
-  components: { TextInput },
   props: {
     schema: {
       type: Object,
