@@ -2,7 +2,7 @@
   <div>
     <label :for="uuid" v-html="labelHtml" />
     <input
-      type="text"
+      :type="type"
       :value="modelValue"
       :required="required"
       :id="uuid"
@@ -40,6 +40,10 @@ export default {
     validation: {
       type: Object,
       default: () => ({})
+    },
+    type: {
+      type: String,
+      default: "text"
     }
   },
   computed: {
