@@ -3,7 +3,7 @@
 }
 
 .schema-col {
-  @apply flex flex-col items-start flex-auto m-4;
+  @apply flex flex-col items-stretch flex-auto m-4 text-left;
 }
 
 .label--required {
