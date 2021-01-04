@@ -44,11 +44,19 @@ export default {
     type: {
       type: String,
       default: "text"
+    },
+    validations: {
+      type: Object,
+      default: () => ({})
     }
   },
   computed: {
     labelHtml() {
-      return `${this.label} <span class="label--required">*</span>`;
+      const requiredHtml =
+        this.validations._exclusive && this.validations._exclusive.required
+          ? ' <span class="label--required">*</span>'
+          : "";
+      return this.label + requiredHtml;
     }
   },
   methods: {

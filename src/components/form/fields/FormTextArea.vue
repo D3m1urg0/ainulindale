@@ -39,11 +39,19 @@ export default {
     validation: {
       type: Object,
       default: () => ({})
+    },
+    validations: {
+      type: Object,
+      default: () => ({})
     }
   },
   computed: {
     labelHtml() {
-      return `${this.label} <span class="label--required">*</span>`;
+      const requiredHtml =
+        this.validations._exclusive && this.validations._exclusive.required
+          ? ' <span class="label--required">*</span>'
+          : "";
+      return this.label + requiredHtml;
     }
   },
   methods: {
