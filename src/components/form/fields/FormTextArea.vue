@@ -39,11 +39,19 @@
     validation: {
       type: Object,
       default: () => ({})
+  ***REMOVED***,
+    validations: {
+      type: Object,
+      default: () => ({})
   ***REMOVED***
 ***REMOVED***,
   computed: {
     labelHtml() {
-      return `${this.label} <span class="label--required">*</span>`;
+      const requiredHtml =
+        this.validations._exclusive && this.validations._exclusive.required
+          ? ' <span class="label--required">*</span>'
+          : "";
+      return this.label + requiredHtml;
   ***REMOVED***
 ***REMOVED***,
   methods: {

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <label :for="uuid">
-      {{ label }}
-    </label>
+    <label :for="uuid" v-html="labelHtml" />
     <select
       :value="modelValue"
       :required="required"
@@ -40,7 +38,20 @@
   ***REMOVED***,
     label: { type: String, required: true },
     options: { type: Array, required: true },
-    disableNoSelection: { type: Boolean, default: false }
+    disableNoSelection: { type: Boolean, default: false },
+    validations: {
+      type: Object,
+      default: () => ({})
+  ***REMOVED***
+***REMOVED***,
+  computed: {
+    labelHtml() {
+      const requiredHtml =
+        this.validations._exclusive && this.validations._exclusive.required
+          ? ' <span class="label--required">*</span>'
+          : "";
+      return this.label + requiredHtml;
+  ***REMOVED***
 ***REMOVED***,
   methods: {
     update(value) {
