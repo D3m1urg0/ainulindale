@@ -4273,7 +4273,7 @@ fast-glob@^2.2.6:
     merge2 "^1.2.3"
     micromatch "^3.1.10"
 
-fast-glob@^3.0.3:
+fast-glob@^3.0.3, fast-glob@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.4.tgz#d20aefbf99579383e7f3cc66529158c9b98554d3"
   integrity sha512-kr/Oo6PX51265qeuCYsyGypiO5uJFgBS0jksyG7FUeCyQzNwYnzrNIMR1NXfkZXsMYXYLRAHgISHBz8gQcxKHQ==
@@ -7566,6 +7566,11 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
+prettier@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+
 prettier@^1.18.2, prettier@^1.19.1:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
@@ -9370,6 +9375,18 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vue-auto-routing@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vue-auto-routing/-/vue-auto-routing-1.0.1.tgz#6bc9f17d8288baf2a04d4ef2bbdbc12c5444a067"
+  integrity sha512-7RFIdzZHsCToVYv90ljcCx/hrRaY27d9VYSoUYlPSD26VddqKosEGXkogZ6iMKH9ba71Kkf94/qZfUDCwZgu2Q==
+  dependencies:
+    vue-route-generator "^1.0.0"
+
+vue-cli-plugin-auto-routing@~1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-auto-routing/-/vue-cli-plugin-auto-routing-1.1.1.tgz#8a2a60a94fcb5a6b8dbe2a7cd1f3b76639f46a75"
+  integrity sha512-T8egDECZ6DVnbDc4q8Mzsm4XfGPjiqEVNx7sNbr8iUapmTASeuJ/xomopJ9kRFztv3iw/o5NYfKfauCYoZKfXg==
+
 vue-cli-plugin-axios@~0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-axios/-/vue-cli-plugin-axios-0.0.4.tgz#29d4eb48275c7fe15b92e1fd5d95fbe2a966436f"
@@ -9437,6 +9454,19 @@ vue-loader@^15.9.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-route-generator@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-route-generator/-/vue-route-generator-1.0.0.tgz#7211de178820c2773657b08832470f17102efcee"
+  integrity sha512-u+DjfGwQ5Um8Wvzb5wqlCSwZbUthjiZBC8SY3eCnZlqE1yTCJrKRtp8xN7ffNpcipwllA8IKEyBEga0b5xQSZQ==
+  dependencies:
+    fast-glob "^3.2.4"
+    prettier "2.2.1"
+
+vue-router-layout@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vue-router-layout/-/vue-router-layout-0.2.0.tgz#6560f2431ecd04ba5aab90deaa40042cbed0f6b8"
+  integrity sha512-wq/nSTyxkt8ftaJWMW8DvsluqYfZRumQjX/CXus0q49/6W1FyyHHJFgDoa0SMrJW1hd2jkLopro72L4Fq2ZtMg==
 
 vue-router@4:
   version "4.0.2"
