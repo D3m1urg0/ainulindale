@@ -1,12 +1,17 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
+  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {}
   },
-  variants: {},
-  plugins: []
+  variants: {
+    extend: {
+      fontWeight: ["hover", "focus"]
+    }
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms")
+
+    // ...
+  ]
 };
