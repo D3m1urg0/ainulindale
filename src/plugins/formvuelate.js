@@ -1,11 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { SchemaWizard, SchemaFormFactory } from "formvuelate";
 import VeeValidatePlugin from "@formvuelate/plugin-vee-validate";
+import LookupPlugin from "@formvuelate/plugin-lookup";
 
 import { localize } from "@vee-validate/i18n";
 import it from "@vee-validate/i18n/dist/locale/it.json";
 
 const SchemaFormWithValidation = SchemaFormFactory([
+  LookupPlugin({
+    mapComponents: {
+      string: "FormText",
+      array: "FormSelect"
+    }
+  }),
   VeeValidatePlugin({
     // plugin configuration here
     generateMessage: localize({

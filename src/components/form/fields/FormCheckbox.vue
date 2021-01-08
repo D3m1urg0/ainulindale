@@ -23,6 +23,10 @@ export default {
       type: Object,
       default: () => {}
     },
+    uuid: {
+      type: Number,
+      default: 0
+    },
     label: {
       type: String,
       required: true

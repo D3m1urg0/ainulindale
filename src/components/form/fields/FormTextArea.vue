@@ -1,8 +1,7 @@
 <template>
   <div>
     <label :for="uuid" v-html="labelHtml" />
-    <input
-      :type="type"
+    <textarea
       :value="modelValue"
       :required="required"
       :id="uuid"
@@ -40,10 +39,6 @@ export default {
     validation: {
       type: Object,
       default: () => ({})
-    },
-    type: {
-      type: String,
-      default: "text"
     },
     validations: {
       type: Object,

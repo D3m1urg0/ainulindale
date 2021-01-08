@@ -1,8 +1,4 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
   purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {}
@@ -13,7 +9,9 @@ module.exports = {
     }
   },
   plugins: [
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms")
+
     // ...
   ]
 };
