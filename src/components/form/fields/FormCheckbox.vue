@@ -23,6 +23,10 @@
       type: Object,
       default: () => {}
   ***REMOVED***,
+    uuid: {
+      type: Number,
+      default: 0
+  ***REMOVED***,
     label: {
       type: String,
       required: true

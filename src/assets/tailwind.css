@@ -1,4 +1,18 @@
 /*! @import */
 @tailwind base;
+
+@layer base {
+  h1 {
+***REMOVED***
+  h2 {
+***REMOVED***
+  h3 {
+***REMOVED***
+}
+
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @import url("./forms.css");
+}
