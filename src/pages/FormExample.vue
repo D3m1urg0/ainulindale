@@ -1,47 +1,71 @@
 <template>
-  <!-- <DynamicForm :schema="schema" /> -->
-  <schema-form :schema="schema" v-model:modelValue="formData" />
+  <div id="app">
+    <SchemaForm :schema="schema" v-model="form" />
+    <pre>{{ form }}</pre>
+  </div>
 </template>
 
 <script>
-import { computed, ref } from "vue";
-//import * as yup from "yup";
+import { ref, markRaw, computed } from "vue";
+import { SchemaFormFactory } from "formvuelate";
+import FormText from "@/components/form/fields/FormText"; // ""./components/FormText.vue";
+import FormSelect from "@/components/form/fields/FormSelect"; // "./components/FormSelect.vue";
+// import VeeValidatePlugin from "@formvuelate/plugin-vee-validate";
+// import LookupPlugin from "@formvuelate/plugin-lookup";
+
+const SchemaFormWithPlugins = SchemaFormFactory([
+  // LookupPlugin({
+  // }),
+  // VeeValidatePlugin({
+  // })
+]);
+
+markRaw(FormSelect);
+markRaw(FormText);
 
 export default {
+  name: "App",
+  components: { SchemaForm: SchemaFormWithPlugins },
   setup() {
-    const formData = ref({});
+    const form = ref({
+      type: "A",
+      aField: "",
+      bField: ""
+    });
+
     const schema = computed(() => {
-      return formData.value.type === "A"
+      return form.value.type === "A"
         ? [
             {
-              component: "form-select", //FormText,
+              component: FormSelect,
               label: "Schema A or B?",
               options: ["A", "B"],
               model: "type"
             },
             {
-              component: "form-text",
+              component: FormText,
               label: "A field",
               model: "aField"
             }
           ]
         : [
             {
-              component: "form-select", //FormText,
+              component: FormSelect,
               label: "Schema A or B?",
               options: ["A", "B"],
               model: "type"
             },
             {
-              component: "form-text",
+              component: FormText,
               label: "b field",
               model: "bField"
             }
           ];
     });
+
     return {
-      schema,
-      formData
+      form,
+      schema
     };
   }
 };

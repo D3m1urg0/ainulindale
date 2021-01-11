@@ -6,7 +6,7 @@ import LookupPlugin from "@formvuelate/plugin-lookup";
 import { localize } from "@vee-validate/i18n";
 import it from "@vee-validate/i18n/dist/locale/it.json";
 
-const SchemaFormWithValidation = SchemaFormFactory([
+const SchemaFormWithPlugins = SchemaFormFactory([
   LookupPlugin({
     mapComponents: {
       string: "FormText",
@@ -28,7 +28,7 @@ const SchemaFormWithValidation = SchemaFormFactory([
 
 Plugin.install = function(app /*, options*/) {
   app
-    .component("schema-form", SchemaFormWithValidation)
+    .component("schema-formx", SchemaFormWithPlugins)
     .component("schema-wizard", SchemaWizard);
 };
 

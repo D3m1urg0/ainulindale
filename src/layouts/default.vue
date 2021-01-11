@@ -6,6 +6,5 @@
       <router-link to="/About">About</router-link>
     </div>
     <router-view />
-    <p>This is a default layout</p>
   </div>
 </template>
