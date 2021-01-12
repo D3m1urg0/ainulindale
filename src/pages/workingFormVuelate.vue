@@ -14,9 +14,23 @@ import FormSelect from "@/components/form/fields/FormSelect"; // "./components/F
 // import LookupPlugin from "@formvuelate/plugin-lookup";
 
 const SchemaFormWithPlugins = SchemaFormFactory([
+  /* ------------------ IF I TOGGLE COMMENTS HERE IT STOPS REACTIVITY ------------------------------*/
   // LookupPlugin({
+  //   mapComponents: {
+  //     string: "FormText",
+  //     array: "FormSelect"
+  //   }
   // }),
   // VeeValidatePlugin({
+  //   // plugin configuration here
+  //   generateMessage: localize({
+  //     it
+  //   }),
+  //   classes: {
+  //     valid: "is-valid",
+  //     invalid: "is-invalid",
+  //     dirty: ["is-dirty", "is-dirty"] // multiple classes per flag!
+  //   }
   // })
 ]);
 

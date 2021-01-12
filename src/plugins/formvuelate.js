@@ -28,7 +28,7 @@ const SchemaFormWithPlugins = SchemaFormFactory([
 
 Plugin.install = function(app /*, options*/) {
   app
-    .component("schema-formx", SchemaFormWithPlugins)
+    .component("my-schema-form", SchemaFormWithPlugins)
     .component("schema-wizard", SchemaWizard);
 };
 
