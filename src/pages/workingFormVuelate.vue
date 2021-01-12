@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <SchemaForm :schema="schema" v-model="form" />
+    <p>
+      this also seemps preventing modelCleanup on schema change without the
+      param
+    </p>
     <pre>{{ form }}</pre>
   </div>
 </template>
@@ -42,9 +46,7 @@ export default {
   components: { SchemaForm: SchemaFormWithPlugins },
   setup() {
     const form = ref({
-      type: "A",
-      aField: "",
-      bField: ""
+      type: "A"
     });
 
     const schema = computed(() => {

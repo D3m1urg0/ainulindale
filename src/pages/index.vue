@@ -13,9 +13,7 @@ import { computed, ref } from "vue";
 export default {
   setup() {
     const form = ref({
-      type: "A",
-      aField: "",
-      bField: ""
+      type: "A"
     });
     const schema = computed(() => {
       return form.value.type === "A"
