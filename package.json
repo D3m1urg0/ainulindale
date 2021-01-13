@@ -11,7 +11,7 @@
     "@formvuelate/plugin-lookup": "^1.2.0",
     "@formvuelate/plugin-vee-validate": "^1.0.4",
     "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
     "@tailwindcss/typography": "^0.3.1",
     "@vee-validate/i18n": "^4.0.0-beta.0",
     "@vee-validate/rules": "^4.0.0-alpha.1",
