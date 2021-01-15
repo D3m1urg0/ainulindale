@@ -1,5 +1,7 @@
 # ainulindale
 
+just my own vue3 starter project template
+
 ## Project setup
 ```
 yarn install
