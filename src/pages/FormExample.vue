@@ -1,5 +1,4 @@
 <template>
-  <!-- <DynamicForm :schema="schema" /> -->
   <schema-form :schema="schema" v-model:modelValue="formData" />
 </template>
 
