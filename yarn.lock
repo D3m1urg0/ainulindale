@@ -846,15 +846,15 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@formvuelate/plugin-lookup@^1.2.0":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@formvuelate/plugin-lookup/-/plugin-lookup-1.2.1.tgz#def44f55a8d0ff723458244e6b6ca59430f0f07e"
-  integrity sha512-LC0Q5IgKy/ZHDVFzJD8vG39/RwssxkgmIfNiVq2hEKdgmAWdG0u0/dNNa2HT1W1KKC0uORnzeMB7M3psSMjcTw==
+"@formvuelate/plugin-lookup@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@formvuelate/plugin-lookup/-/plugin-lookup-1.2.3.tgz#9a5b667892dde648a1cf30bb78916d99a91f65ab"
+  integrity sha512-+lSbuYlehSxtlSIrG40NuP95i68/v5UEwHg4K0Dbjts1BGOwsoNhZEWYkgipWZn58ThIFApSCgC10Bg04q1gQQ==
 
-"@formvuelate/plugin-vee-validate@^1.0.4":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@formvuelate/plugin-vee-validate/-/plugin-vee-validate-1.0.5.tgz#247e72fcf9ec1556edf83e6481fac6baf04f6a32"
-  integrity sha512-gVx02c/gv0+gl482AMO9YplzzsHO+MbtYxZpjHAMm+z9OHM+P9UORVrAiLvh8qrVWkXTMEO9KsGOTosAF9ccqg==
+"@formvuelate/plugin-vee-validate@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@formvuelate/plugin-vee-validate/-/plugin-vee-validate-1.0.6.tgz#61cebf5c369f588007ca646d188c8c2907fa461a"
+  integrity sha512-gK6C5Xw01pV1DdBPGKih84uB5E5pdHiyWDcc/uQ+hP07kJKg3pzyGyThUXJdkt/8fH40SOu/HrEFpdrI+8Jx1Q==
 
 "@fullhuman/postcss-purgecss@^2.1.2", "@fullhuman/postcss-purgecss@^2.3.0":
   version "2.3.0"
@@ -974,6 +974,11 @@
   integrity sha512-czfvEdY+J2Ogfd6RUSr/ZSUmDxTujr34M++YLnp2cCPC3oJ4kFvFMaRXA6cEXKw7F1hJuapdjXRjsXIEXGgORg==
   dependencies:
     mini-svg-data-uri "^1.2.3"
+
+"@tailwindcss/line-clamp@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.2.0.tgz#7f30f26ed3835d64d1eb5a9b0d60cf5291dd2a3b"
+  integrity sha512-+jXSdRK3/9V/BCPCr+iNpMMhxWMMv62vn/AS2b3/ClmueGuhCijW3bUwO1IiHnE7uCaF74Sli8jUCv9djwvpLg==
 
 "@tailwindcss/postcss7-compat@npm:@tailwindcss/postcss7-compat", "tailwindcss@npm:@tailwindcss/postcss7-compat":
   version "2.0.2"
