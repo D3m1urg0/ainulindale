@@ -1,5 +1,5 @@
 <template>
-  <schema-form :schema="schema" v-model:modelValue="formData" />
+  <schema-form :schema="schema" v-model="formData" />
 </template>
 
 <script>

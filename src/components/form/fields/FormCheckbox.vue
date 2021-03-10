@@ -13,6 +13,7 @@
 
 <script>
 ***REMOVED***
+  emits: ["update:modelValue"],
   props: {
     modelValue: { required: true },
     required: {

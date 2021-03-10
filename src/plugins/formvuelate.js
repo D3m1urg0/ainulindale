@@ -29,7 +29,7 @@ const SchemaFormWithPlugins = SchemaFormFactory([
 ***REMOVED***
 ***REMOVED***
     app
-      .component("my-schema-form", SchemaFormWithPlugins)
+      .component("schema-form", SchemaFormWithPlugins)
       .component("schema-wizard", SchemaWizard);
 ***REMOVED***
 ***REMOVED***
