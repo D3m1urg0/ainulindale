@@ -1,3 +1,6 @@
+form input {
+  @apply text-gray-700;
+}
 .schema-row {
   @apply flex flex-wrap;
 }
