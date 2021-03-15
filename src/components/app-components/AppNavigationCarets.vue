@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex max-w-full">
     <svg
-      :id="`prev-caret-${_uid}`"
+      :id="`prev-caret-${uid}`"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 10 24"
@@ -18,7 +18,7 @@
     </svg>
     <slot />
     <svg
-      :id="`next-caret-${_uid}`"
+      :id="`next-caret-${uid}`"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 10 24"
