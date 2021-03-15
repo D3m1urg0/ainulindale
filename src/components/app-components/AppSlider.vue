@@ -1,11 +1,11 @@
 <template>
   <div class="flex">
-    <app-navigation-carets v-if="items">
+    <app-navigation-carets v-if="items" :uid="uid">
       <swiper
         v-bind="$attrs"
         :navigation="{
-          prevEl: `#prev-caret-${_uid}`,
-          nextEl: `#next-caret-${_uid}`
+          prevEl: `#prev-caret-${uid}`,
+          nextEl: `#next-caret-${uid}`
       ***REMOVED***"
       >
         <swiper-slide v-for="(item, i) in [...items]" :key="i">
@@ -18,6 +18,6 @@
 
 <script>
 ***REMOVED***
-  props: ["items"]
+  props: ["items", "uid"]
 ***REMOVED***
 </script>
