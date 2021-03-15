@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex max-w-full">
     <svg
-      id="prev-caret"
+      :id="`prev-caret-${_uid}`"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 10 24"
@@ -18,7 +18,7 @@
     </svg>
     <slot />
     <svg
-      id="next-caret"
+      :id="`next-caret-${_uid}`"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 10 24"
@@ -39,7 +39,8 @@
 <script>
 ***REMOVED***
   props: {
-    mobileOnly: Boolean
+    mobileOnly: Boolean,
+    uid: { required: true }
 ***REMOVED***
 ***REMOVED***
 </script>
