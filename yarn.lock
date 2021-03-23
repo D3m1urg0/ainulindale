@@ -1078,6 +1078,18 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/gapi.auth2@0.0.52":
+  version "0.0.52"
+  resolved "https://registry.yarnpkg.com/@types/gapi.auth2/-/gapi.auth2-0.0.52.tgz#da859ac501e48f97f212ee4782840e8c9adc5082"
+  integrity sha512-Q9OEsiLXQ3fWv93voIDr4tXpiO0zNFx2RPK+9wj21LY3ydyx/CtoXQgbf+6iNSTuyHUDF4J/c74maKghtPbbaA==
+  dependencies:
+    "@types/gapi" "*"
+
+"@types/gapi@*", "@types/gapi@0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@types/gapi/-/gapi-0.0.39.tgz#bc7fa8cd0cb175b36e3609790fb2ed73a33f6881"
+  integrity sha512-R1TZeZbvvbIC60DBJMhuOEivQHzOQtzl3uMDOOENTYQTSSDB6oEMpJo8HVPOTWivdUTbyEcB5qQOVr/JCKRlCQ==
+
 "@types/glob@^7.1.1":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.3.tgz#e6ba80f36b7daad2c685acd9266382e68985c183"
@@ -9314,6 +9326,11 @@ url-parse@^1.4.3, url-parse@^1.4.7:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
+url-search-params-polyfill@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-8.1.0.tgz#5c15b69687165bfd4f6c7d8a161d70d85385885b"
+  integrity sha512-MRG3vzXyG20BJ2fox50/9ZRoe+2h3RM7DIudVD2u/GY9MtayO1Dkrna76IUOak+uoUPVWbyR0pHCzxctP/eDYQ==
+
 url@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
@@ -9459,6 +9476,11 @@ vue-cli-plugin-tailwind@~1.5.0:
     "@fullhuman/postcss-purgecss" "^2.3.0"
     tailwindcss "^1.8.9"
 
+vue-cookie-next@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vue-cookie-next/-/vue-cookie-next-1.0.3.tgz#28dd89f2901b7301db2eb3c7a2acff8f861e7fbd"
+  integrity sha512-mPG57lCXFnfo0poxq0MxY9duJupzDFcGdxLkpR/N2GVyNBqJ1oQst7O39k6kRPM8WvV1jmNGFYVzLSwp/642NA==
+
 vue-demi@latest:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.7.1.tgz#e7cf3e70e4c69bc192f4530c2665ce8b289f5dc4"
@@ -9475,6 +9497,23 @@ vue-eslint-parser@^7.6.0:
     espree "^6.2.1"
     esquery "^1.4.0"
     lodash "^4.17.15"
+
+vue-gapi@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-gapi/-/vue-gapi-1.1.0.tgz#03bb4a3335130074968e9bc7a44bb5803fd51a7c"
+  integrity sha512-/s5eZmIM4FUpuOT7Qk/T/mIeB22Vd+HEP5tFauGbXbIb8h+MvBJRoyHXVd7HNcwe/dh+b7hHeWN2aFDGph1uCQ==
+  dependencies:
+    "@types/gapi" "0.0.39"
+    "@types/gapi.auth2" "0.0.52"
+
+vue-gtm@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/vue-gtm/-/vue-gtm-3.5.0.tgz#a64843cec1c39aa57f07d25e114908d65b47f0d0"
+  integrity sha512-MJ0eqPm2NG1MjUJv8K3DghVzbXNONLd2rav0WbpuCfnD5r+SKyD+kxYnPo8exAg7zN+krY+swXoXKJuXtb2Acg==
+  dependencies:
+    url-search-params-polyfill "^8.1.0"
+  optionalDependencies:
+    vue-router "^4.0.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
@@ -9518,6 +9557,11 @@ vue-router@4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.4.tgz#ad9b4b7bbdad622407b4ff189b1646f48c1e9053"
   integrity sha512-uN6PDEaYdU9aRO7mU+Dkr1uaY49hV3fucEDG/Vre/Qj8ct3RoJS16vcPrvKVzn69zDDjBV5b9Xw7fZA9r6b/Iw==
+
+vue-router@^4.0.0:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.5.tgz#dd0a4134bc950c37aef64b973e9ee1008428d8fa"
+  integrity sha512-AQq+pllb6FCc7rS6vh4PPcce3XA1jgK3hKNkQ4hXHwoVN7jOeAOMKCnX7XAX3etV9rmN7iNW8iIwgPk95ckBjw==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"
