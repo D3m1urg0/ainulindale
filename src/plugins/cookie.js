@@ -1,10 +1,10 @@
 import { VueCookieNext } from "vue-cookie-next";
 
-***REMOVED***
-***REMOVED***
+export default {
+  install: function(app /*, options*/) {
     app.use(VueCookieNext);
-***REMOVED***
-***REMOVED***
+  }
+};
 
 // set default config
 VueCookieNext.config();

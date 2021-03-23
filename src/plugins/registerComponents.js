@@ -31,6 +31,6 @@ const register = function(app /*, options*/) {
       // otherwise fall back to module's root.
       componentConfig.default || componentConfig
     );
-***REMOVED***);
-***REMOVED***
+  });
+};
 export default register;

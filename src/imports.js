@@ -15,6 +15,6 @@ const using = function(app /*, options*/) {
   plugins.keys().forEach(name => {
     const plugin = plugins(name).default;
     app.use(plugin);
-***REMOVED***);
-***REMOVED***
+  });
+};
 export default using;

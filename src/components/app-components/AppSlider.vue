@@ -6,7 +6,7 @@
         :navigation="{
           prevEl: `#prev-caret-${uid}`,
           nextEl: `#next-caret-${uid}`
-      ***REMOVED***"
+        }"
       >
         <swiper-slide v-for="(item, i) in [...items]" :key="i">
           <slot name="slide" v-bind="item" />
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-***REMOVED***
+export default {
   props: ["items", "uid"]
-***REMOVED***
+};
 </script>

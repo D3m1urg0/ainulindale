@@ -3,11 +3,11 @@
 
 @layer base {
   h1 {
-***REMOVED***
+  }
   h2 {
-***REMOVED***
+  }
   h3 {
-***REMOVED***
+  }
 }
 
 @tailwind components;

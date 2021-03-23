@@ -19,7 +19,7 @@ configure({
     valid: "is-valid",
     invalid: "is-invalid",
     dirty: ["is-dirty", "is-dirty"] // multiple classes per flag!
-***REMOVED***
+  }
 });
 
 setLocale("it");
@@ -30,14 +30,14 @@ const SchemaFormWithPlugins = SchemaFormFactory([
     mapComponents: {
       string: "FormText",
       array: "FormSelect"
-  ***REMOVED***
-***REMOVED***)
+    }
+  })
 ]);
 
-***REMOVED***
-***REMOVED***
+export default {
+  install: function(app /*, options*/) {
     app
       .component("schema-form", SchemaFormWithPlugins)
       .component("schema-wizard", SchemaWizard);
-***REMOVED***
-***REMOVED***
+  }
+};

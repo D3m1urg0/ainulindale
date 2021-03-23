@@ -13,7 +13,7 @@ const router = createRouter({
       path: "/",
       component: RouterLayout,
       children: routes
-  ***REMOVED***
+    }
   ]
 });
 

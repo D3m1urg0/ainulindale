@@ -37,10 +37,10 @@
 </template>
 
 <script>
-***REMOVED***
+export default {
   props: {
     mobileOnly: Boolean,
     uid: { required: true }
-***REMOVED***
-***REMOVED***
+  }
+};
 </script>

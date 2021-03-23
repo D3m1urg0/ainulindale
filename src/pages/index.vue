@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-***REMOVED***
+export default {
   name: "home"
-***REMOVED***
+};
 </script>

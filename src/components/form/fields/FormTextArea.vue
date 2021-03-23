@@ -14,39 +14,39 @@
 
 <script>
 import _ from "lodash";
-***REMOVED***
+export default {
   emits: ["update:modelValue"],
   props: {
     modelValue: { required: true },
     required: {
       type: Boolean,
       default: false
-  ***REMOVED***,
+    },
     label: {
       type: String,
       required: true
-  ***REMOVED***,
+    },
     config: {
       type: Object,
       default: () => ({ type: "text" })
-  ***REMOVED***,
+    },
     readOnly: {
       type: Boolean,
       default: false
-  ***REMOVED***,
+    },
     uuid: {
       type: Number,
       default: 0
-  ***REMOVED***,
+    },
     validation: {
       type: Object,
       default: () => ({})
-  ***REMOVED***,
+    },
     validations: {
       type: Object,
       default: () => ({})
-  ***REMOVED***
-***REMOVED***,
+    }
+  },
   computed: {
     labelHtml() {
       const requiredHtml =
@@ -55,12 +55,12 @@ import _ from "lodash";
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label + requiredHtml;
-  ***REMOVED***
-***REMOVED***,
+    }
+  },
   methods: {
     update(value) {
       this.$emit("update:modelValue", value);
-  ***REMOVED***
-***REMOVED***
-***REMOVED***
+    }
+  }
+};
 </script>

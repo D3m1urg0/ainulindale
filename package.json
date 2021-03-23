@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
-***REMOVED***,
+  },
   "dependencies": {
     "@formvuelate/plugin-lookup": "^1.2.3",
     "@formvuelate/plugin-vee-validate": "^1.0.6",
@@ -36,7 +36,7 @@
     "vue-router-layout": "^0.2.0",
     "vuex": "^4.0.0-0",
     "yup": "^0.29.3"
-***REMOVED***,
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
@@ -59,14 +59,14 @@
     "vue-cli-plugin-lodash": "~0.1.3",
     "vue-cli-plugin-moment": "~0.1.1",
     "vue-cli-plugin-tailwind": "~1.5.0"
-***REMOVED***,
+  },
   "gitHooks": {
     "pre-commit": "lint-staged"
-***REMOVED***,
+  },
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "vue-cli-service lint",
       "git add"
     ]
-***REMOVED***
+  }
 }

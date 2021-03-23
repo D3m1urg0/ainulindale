@@ -11,8 +11,8 @@ import "swiper/swiper-bundle.css";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Controller]);
 
-***REMOVED***
-***REMOVED***
+export default {
+  install: function(app /*, options*/) {
     app.component("swiper", Swiper).component("swiper-slide", SwiperSlide);
-***REMOVED***
-***REMOVED***
+  }
+};
