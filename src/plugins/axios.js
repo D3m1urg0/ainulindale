@@ -38,20 +38,20 @@ _axios.interceptors.response.use(
 ***REMOVED***
 );
 
-// Plugin.install = function(Vue /*, options*/) {
-//   Vue.axios = _axios;
-//   window.axios = _axios;
-//   Object.defineProperties(Vue.config.globalProperties, {
-//     axios: {
-//       get() {
-//         return _axios;
-//     ***REMOVED***
-//   ***REMOVED***,
-//     $axios: {
-//       get() {
-//         return _axios;
-//     ***REMOVED***
-//   ***REMOVED***
+Plugin.install = function(Vue /*, options*/) {
+  Vue.axios = _axios;
+  window.axios = _axios;
+  Object.defineProperties(Vue.config.globalProperties, {
+    axios: {
+      get() {
+        return _axios;
+    ***REMOVED***
+  ***REMOVED***,
+    $axios: {
+      get() {
+        return _axios;
+    ***REMOVED***
+  ***REMOVED***
 ***REMOVED***);
 ***REMOVED***
 
