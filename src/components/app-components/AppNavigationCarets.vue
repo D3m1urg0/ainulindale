@@ -24,7 +24,7 @@
       viewBox="0 0 10 24"
       stroke="currentColor"
       class=" flex-none h-10 my-auto cursor-pointer"
-      :class="{ 'md:hidden': !allResolution }"
+      :class="{ 'md:hidden': mobileOnly }"
     >
       <path
         stroke-linecap="round"
@@ -44,3 +44,9 @@ export default {
   }
 };
 </script>
+
+<style lang="postcss" scoped>
+[aria-disabled="true"] {
+  @apply invisible;
+}
+</style>

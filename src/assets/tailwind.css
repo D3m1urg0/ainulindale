@@ -2,17 +2,10 @@
 @tailwind base;
 
 @layer base {
-  h1 {
-  }
-  h2 {
-  }
-  h3 {
+  @layer base {
+    @import url("./forms.css");
   }
 }
 
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  @import url("./forms.css");
-}

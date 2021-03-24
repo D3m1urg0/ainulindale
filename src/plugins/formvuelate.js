@@ -15,11 +15,7 @@ Object.keys(AllRules).forEach(rule => {
 
 configure({
   generateMessage: localize({ it }),
-  classes: {
-    valid: "is-valid",
-    invalid: "is-invalid",
-    dirty: ["is-dirty", "is-dirty"] // multiple classes per flag!
-  }
+  validity: true
 });
 
 setLocale("it");

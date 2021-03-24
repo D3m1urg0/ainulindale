@@ -6,5 +6,8 @@ module.exports = {
     autoRouting: {
       chunkNamePrefix: "page-"
     }
+  },
+  devServer: {
+    host: "localhost"
   }
 };

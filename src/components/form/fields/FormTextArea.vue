@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label :for="uuid" v-html="labelHtml" />
+    <label :for="uuid" v-html="labelHtml" class="label" />
     <textarea
       :value="modelValue"
       :required="required"
