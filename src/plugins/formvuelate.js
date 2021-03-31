@@ -21,13 +21,19 @@ configure({
 setLocale("it");
 
 const SchemaFormWithPlugins = SchemaFormFactory([
-  VeeValidatePlugin({}),
   LookupPlugin({
     mapComponents: {
-      string: "FormText",
-      array: "FormSelect"
+      string: "form-text",
+      array: "form-select",
+      radio: "form-radio-buttons",
+      checkbox: "form-checkbox",
+      textarea: "form-text-area"
+    },
+    mapProps: {
+      type: "component"
     }
-  })
+  }),
+  VeeValidatePlugin({})
 ]);
 
 export default {
