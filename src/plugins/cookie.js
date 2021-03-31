@@ -7,4 +7,4 @@ export default {
 };
 
 // set default config
-VueCookieNext.config();
+VueCookieNext.config({ expire: "Infinity" });
