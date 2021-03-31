@@ -20,8 +20,9 @@
 //   trackOnNextTick: false // Whether or not call trackView in Vue.nextTick
 // };
 
-// export default {
-//   install: function(app /*, options*/) {
-//     app.use(createGtm(gtmConf));
-//   }
-// };
+export default {
+  install: function(app /*, options*/) {
+    app;
+    // app.use(createGtm(gtmConf));
+  }
+};
