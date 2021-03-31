@@ -1,7 +1,7 @@
 <template>
   <div>
     <label :for="uuid" v-html="labelHtml" class="label" />
-    <div v-for="option in options" :key="option">
+    <div v-for="option in options" :key="option" class="flex items-baseline">
       <input
         :id="option"
         type="radio"
@@ -9,7 +9,7 @@
         :name="uuid"
         :value="option"
       />
-      <label :for="option" v-text="option" />
+      <label :for="option" v-text="option" class="checkbox__label" />
     </div>
   </div>
 </template>
