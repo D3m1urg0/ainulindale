@@ -1,22 +1,16 @@
 <template>
   <div>
     <label :for="uuid" v-html="labelHtml" class="label" />
-    <select
-      :value="modelValue"
-      :required="required"
-      :id="uuid"
-      @input="update($event.target.value)"
-    >
-      <option v-if="!disableNoSelection">-</option>
-      <option
-        v-for="option in options"
-        :key="option"
+    <div v-for="option in options" :key="option">
+      <input
+        :id="option"
+        type="radio"
+        v-model="value"
+        :name="uuid"
         :value="option"
-        :selected="option === modelValue"
-      >
-        {{ option }}
-      </option>
-    </select>
+      />
+      <label :for="option" v-text="option" />
+    </div>
   </div>
 </template>
 
@@ -24,6 +18,7 @@
 import _ from "lodash";
 export default {
   emits: ["update:modelValue"],
+
   props: {
     modelValue: { required: true },
     required: {
@@ -38,12 +33,22 @@ export default {
       type: Number,
       default: 0
     },
-    label: { type: String, required: true },
-    options: { type: Array, required: true },
-    disableNoSelection: { type: Boolean, default: false },
+    label: {
+      type: String,
+      required: true
+    },
+    options: Array,
     validations: {
       type: Object,
       default: () => ({})
+    }
+  },
+  data: vm => ({
+    value: vm.modelValue
+  }),
+  watch: {
+    value(val) {
+      this.$emit("update:modelValue", val);
     }
   },
   computed: {
@@ -54,11 +59,6 @@ export default {
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label && this.label + requiredHtml;
-    }
-  },
-  methods: {
-    update(value) {
-      this.$emit("update:modelValue", value);
     }
   }
 };

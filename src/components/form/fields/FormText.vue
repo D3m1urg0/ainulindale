@@ -55,11 +55,11 @@ export default {
   computed: {
     labelHtml() {
       const requiredHtml =
-        (this.validations._exclusive && this.validations._exclusive.required) ||
+        (this.validations && _.get(this.validations, "_exclusive.required")) ||
         _.includes(this.validations, "required")
           ? ' <span class="label--required">*</span>'
           : "";
-      return this.label + requiredHtml;
+      return this.label && this.label + requiredHtml;
     }
   },
   methods: {
