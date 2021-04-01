@@ -11,6 +11,7 @@
       />
       <label :for="option" v-text="option" class="checkbox__label" />
     </div>
+    <p v-show="validation.errorMessage" v-text="validation.errorMessage"></p>
   </div>
 </template>
 
@@ -35,6 +36,10 @@ export default {
     },
     label: String,
     options: [Boolean, Array],
+    validation: {
+      type: Object,
+      default: () => ({})
+    },
     validations: {
       type: Object,
       default: () => ({})

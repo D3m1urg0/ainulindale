@@ -41,6 +41,10 @@ export default {
     label: { type: String, required: true },
     options: { type: Array, required: true },
     disableNoSelection: { type: Boolean, default: false },
+    validation: {
+      type: Object,
+      default: () => ({})
+    },
     validations: {
       type: Object,
       default: () => ({})

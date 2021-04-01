@@ -4,11 +4,13 @@
 
 <script>
 import { computed, ref } from "vue";
+import { useSchemaForm } from "formvuelate";
 //import * as yup from "yup";
 
 export default {
   setup() {
     const formData = ref({});
+    useSchemaForm(formData);
     const schema = computed(() => {
       return formData.value.type === "A"
         ? [
