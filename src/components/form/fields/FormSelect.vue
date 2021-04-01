@@ -4,6 +4,7 @@
     <select
       :value="modelValue"
       :required="required"
+      :placeholder="placeholder"
       :id="uuid"
       @input="update($event.target.value)"
     >
@@ -26,6 +27,7 @@ export default {
   emits: ["update:modelValue"],
   props: {
     modelValue: { required: true },
+    placeholder: String,
     required: {
       type: Boolean,
       default: false

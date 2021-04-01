@@ -1,11 +1,12 @@
 <template>
   <div>
-    <label :for="uuid" v-html="labelHtml" class="label" />
+    <label class="label" :for="uuid" v-html="labelHtml" />
     <textarea
       :value="modelValue"
       :required="required"
       :id="uuid"
       :disabled="readOnly"
+      :placeholder="placeholder"
       @input="update($event.target.value)"
     />
     <p v-show="validation.errorMessage" v-text="validation.errorMessage"></p>
@@ -18,6 +19,7 @@ export default {
   emits: ["update:modelValue"],
   props: {
     modelValue: { required: true },
+    placeholder: String,
     required: {
       type: Boolean,
       default: false

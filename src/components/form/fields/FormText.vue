@@ -4,6 +4,7 @@
     <input
       :type="type"
       :value="modelValue"
+      :placeholder="placeholder"
       :required="required"
       :id="uuid"
       :disabled="readOnly"
@@ -19,6 +20,7 @@ export default {
   emits: ["update:modelValue"],
   props: {
     modelValue: { required: true },
+    placeholder: String,
     required: {
       type: Boolean,
       default: false
