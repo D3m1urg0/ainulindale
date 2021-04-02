@@ -1,8 +1,12 @@
+form {
+  @apply w-full;
+}
+
 .schema-row {
-  @apply flex flex-wrap -m-2;
+  @apply grid gap-4;
+  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
 }
 .schema-col {
-  @apply flex flex-col items-stretch flex-auto m-4 text-left;
 }
 
 .label {
@@ -13,7 +17,7 @@
 }
 
 form input {
-  @apply text-gray-700;
+  @apply w-full text-gray-700;
 }
 
 /* Chrome, Safari, Edge, Opera */

@@ -14,30 +14,39 @@ export default {
     const schema = computed(() => {
       return formData.value.type === "A"
         ? [
-            {
-              component: "form-select", //FormText,
-              label: "Schema A or B?",
-              options: ["A", "B"],
-              model: "type"
-            },
-            {
-              component: "form-text",
-              label: "A field",
-              model: "aField"
-            }
+            [
+              {
+                component: "form-select", //FormText,
+                label: "Schema A or B?",
+                options: ["A", "B"],
+                model: "type"
+              },
+              {
+                component: "form-text",
+                label: "A field",
+                model: "aField"
+              },
+              {
+                component: "form-text",
+                label: "A field",
+                model: "aField"
+              }
+            ]
           ]
         : [
-            {
-              component: "form-select", //FormText,
-              label: "Schema A or B?",
-              options: ["A", "B"],
-              model: "type"
-            },
-            {
-              component: "form-text",
-              label: "b field",
-              model: "bField"
-            }
+            [
+              {
+                component: "form-select", //FormText,
+                label: "Schema A or B?",
+                options: ["A", "B"],
+                model: "type"
+              },
+              {
+                component: "form-text",
+                label: "b field",
+                model: "bField"
+              }
+            ]
           ];
     });
     return {

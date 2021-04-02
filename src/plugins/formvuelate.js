@@ -24,6 +24,10 @@ const SchemaFormWithPlugins = SchemaFormFactory([
   LookupPlugin({
     mapComponents: {
       string: "form-text",
+      password: "form-text",
+      date: "form-text",
+      mail: "form-text",
+      number: "form-text",
       array: "form-select",
       radio: "form-radio-buttons",
       checkbox: "form-checkbox",
