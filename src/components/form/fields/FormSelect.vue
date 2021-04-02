@@ -2,6 +2,7 @@
   <div>
     <label :for="uuid" v-html="labelHtml" class="label" />
     <select
+      type="select"
       :value="modelValue"
       :required="required"
       :placeholder="placeholder"

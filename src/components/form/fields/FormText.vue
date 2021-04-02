@@ -29,10 +29,7 @@ export default {
       type: String,
       required: true
     },
-    config: {
-      type: Object,
-      default: () => ({ type: "text" })
-    },
+
     readOnly: {
       type: Boolean,
       default: false
