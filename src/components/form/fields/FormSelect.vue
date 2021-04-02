@@ -1,24 +1,26 @@
 <template>
   <div>
     <label :for="uuid" v-html="labelHtml" class="label" />
-    <select
+    <multiselect
       type="select"
-      :value="modelValue"
+      :model-value="modelValue"
+      :options="options"
+      @select="update($event)"
       :required="required"
       :placeholder="placeholder"
       :id="uuid"
-      @input="update($event.target.value)"
+    />
+    <!-- <select :value="modelValue">
+    <option v-if="!disableNoSelection">-</option>
+    <option
+      v-for="option in options"
+      :key="option"
+      :value="option"
+      :selected="option === modelValue"
     >
-      <option v-if="!disableNoSelection">-</option>
-      <option
-        v-for="option in options"
-        :key="option"
-        :value="option"
-        :selected="option === modelValue"
-      >
-        {{ option }}
-      </option>
-    </select>
+      {{ option }}
+    </option>
+  </select> -->
   </div>
 </template>
 
@@ -65,8 +67,18 @@ export default {
   },
   methods: {
     update(value) {
+      console.log(value);
       this.$emit("update:modelValue", value);
     }
   }
 };
 </script>
+
+<style src="@/assets/multiselect.css" />
+
+/*
+<style lang="postcss" scoped>
+.multiselect {
+}
+</style>
+*/

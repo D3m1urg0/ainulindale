@@ -1,3 +1,21 @@
+.schema-row {
+  @apply flex flex-wrap -m-2;
+}
+.schema-col {
+  @apply flex flex-col items-stretch flex-auto m-4 text-left;
+}
+
+.label {
+  @apply block mb-2 font-bold leading-tight tracking-wide text-gray-700;
+}
+.label--required {
+  @apply text-red-700;
+}
+
+form input {
+  @apply text-gray-700;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -10,24 +28,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-form input {
-  @apply text-gray-700;
-}
-.schema-row {
-  @apply flex flex-wrap -m-2;
-}
-
-.schema-col {
-  @apply flex flex-col items-stretch flex-auto m-4 text-left;
-}
-.label {
-  @apply mb-2 font-bold leading-tight tracking-wide text-gray-700;
-}
-
 .checkbox__label {
   @apply inline-flex items-center px-2;
-}
-
-.label--required {
-  @apply text-red-700;
 }

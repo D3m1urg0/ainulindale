@@ -1,10 +1,11 @@
-<template>
-  <div>
+<template
+  ><div>
     <label :for="uuid" v-html="labelHtml" class="label" />
     <div v-for="option in options" :key="option" class="flex items-baseline">
       <input
         :id="option"
         type="checkbox"
+        class="form-checkbox"
         v-model="value"
         :name="uuid"
         :value="option"

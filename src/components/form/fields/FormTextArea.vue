@@ -2,6 +2,7 @@
   <div>
     <label class="label" :for="uuid" v-html="labelHtml" />
     <textarea
+      class="form-textarea "
       :value="modelValue"
       :required="required"
       :id="uuid"

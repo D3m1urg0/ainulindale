@@ -1073,6 +1073,11 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.2.tgz#a53515db25d8038374381b73af20bb4f2e508d87"
   integrity sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==
 
+"@suadelabs/vue3-multiselect@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@suadelabs/vue3-multiselect/-/vue3-multiselect-1.0.0.tgz#803e63a1cf0e22fb6dbc0d70234e829a727b2d0f"
+  integrity sha512-3JzVCwbjJbi2oV/Rbrd9PHqLFdl2AYXS+HCPfNPOeMRJZnWvQp5UOJyNi5H4rgRYYlqFWb1/UPGAaoNj4PCncQ==
+
 "@surma/rollup-plugin-off-main-thread@^1.4.1":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-1.4.2.tgz#e6786b6af5799f82f7ab3a82e53f6182d2b91a58"

@@ -1,5 +1,5 @@
-<template>
-  <div>
+<template
+  ><div>
     <label :for="uuid" v-html="labelHtml" class="label" />
     <div v-for="option in options" :key="option" class="flex items-baseline">
       <input
@@ -8,6 +8,7 @@
         v-model="value"
         :name="uuid"
         :value="option"
+        class="form-radio"
       />
       <label :for="option" v-text="option" class="checkbox__label" />
     </div>

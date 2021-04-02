@@ -2,6 +2,7 @@
   <div>
     <label :for="uuid" v-html="labelHtml" class="label" />
     <input
+      class="form-input"
       :type="type"
       :value="modelValue"
       :placeholder="placeholder"
