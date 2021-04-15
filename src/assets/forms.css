@@ -1,10 +1,16 @@
 form {
-  @apply w-full;
+  @apply auto-cols-fr grid w-full gap-4;
 }
 
 .schema-row {
   @apply grid gap-4;
-  grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+}
+
+@screen sm {
+  .schema-row {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
 }
 .schema-col {
 }
