@@ -13,6 +13,10 @@ const darken = (clr, val) =>
 module.exports = {
   purge: ["./index.html", "./src/**/*.{html,css,vue,js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem"
+    },
     fontFamily: {},
     extend: {
       colors: {

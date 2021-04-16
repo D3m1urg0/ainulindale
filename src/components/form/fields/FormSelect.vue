@@ -10,17 +10,7 @@
       :placeholder="placeholder"
       :id="uuid"
     />
-    <!-- <select :value="modelValue">
-    <option v-if="!disableNoSelection">-</option>
-    <option
-      v-for="option in options"
-      :key="option"
-      :value="option"
-      :selected="option === modelValue"
-    >
-      {{ option }}
-    </option>
-  </select> -->
+    <p v-show="validation.errorMessage" v-text="validation.errorMessage"></p>
   </div>
 </template>
 
