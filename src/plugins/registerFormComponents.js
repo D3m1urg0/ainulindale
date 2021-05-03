@@ -9,8 +9,8 @@ const requireComponent = require.context(
   /(^|\/)[A-Z]\S+\.(vue|js)$/
 );
 
-const register = function(app /*, options*/) {
-  requireComponent.keys().forEach(fileName => {
+const register = function (app /*, options*/) {
+  requireComponent.keys().forEach((fileName) => {
     // Get component config
     const componentConfig = requireComponent(fileName);
 

@@ -5,6 +5,7 @@
       <input
         :id="option"
         type="checkbox"
+        class="form-checkbox"
         v-model="value"
         :name="uuid"
         :value="option"
@@ -24,39 +25,39 @@ export default {
     modelValue: { required: true },
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     config: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     uuid: {
       type: Number,
-      default: 0
+      default: 0,
     },
     label: String,
     options: [Boolean, Array],
     validation: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     validations: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
-  data: vm => ({
+  data: (vm) => ({
     value:
       _.isArray(vm.options) && vm.options.length > 1
         ? _.isArray(vm.modelValue)
           ? vm.modelValue
           : []
-        : vm.modelValue
+        : vm.modelValue,
   }),
   watch: {
     value(val) {
       this.$emit("update:modelValue", val);
-    }
+    },
   },
   computed: {
     labelHtml() {
@@ -66,7 +67,7 @@ export default {
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label && this.label + requiredHtml;
-    }
-  }
+    },
+  },
 };
 </script>

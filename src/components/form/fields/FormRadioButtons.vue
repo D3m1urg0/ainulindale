@@ -8,6 +8,7 @@
         v-model="value"
         :name="uuid"
         :value="option"
+        class="form-radio"
       />
       <label :for="option" v-text="option" class="checkbox__label" />
     </div>
@@ -24,37 +25,37 @@ export default {
     modelValue: { required: true },
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     config: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     uuid: {
       type: Number,
-      default: 0
+      default: 0,
     },
     label: {
       type: String,
-      required: true
+      required: true,
     },
     options: Array,
     validation: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     validations: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
-  data: vm => ({
-    value: vm.modelValue
+  data: (vm) => ({
+    value: vm.modelValue,
   }),
   watch: {
     value(val) {
       this.$emit("update:modelValue", val);
-    }
+    },
   },
   computed: {
     labelHtml() {
@@ -64,7 +65,7 @@ export default {
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label && this.label + requiredHtml;
-    }
-  }
+    },
+  },
 };
 </script>

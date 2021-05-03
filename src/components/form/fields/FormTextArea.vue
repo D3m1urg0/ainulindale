@@ -2,6 +2,7 @@
   <div>
     <label class="label" :for="uuid" v-html="labelHtml" />
     <textarea
+      class="form-textarea"
       :value="modelValue"
       :required="required"
       :id="uuid"
@@ -22,29 +23,29 @@ export default {
     placeholder: String,
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     label: {
       type: String,
-      required: true
+      required: true,
     },
 
     readOnly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     uuid: {
       type: Number,
-      default: 0
+      default: 0,
     },
     validation: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     validations: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
     labelHtml() {
@@ -54,12 +55,12 @@ export default {
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label && this.label + requiredHtml;
-    }
+    },
   },
   methods: {
     update(value) {
       this.$emit("update:modelValue", value);
-    }
-  }
+    },
+  },
 };
 </script>

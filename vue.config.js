@@ -1,13 +1,13 @@
 module.exports = {
   pluginOptions: {
     moment: {
-      locales: ["it"]
+      locales: ["it"],
     },
     autoRouting: {
-      chunkNamePrefix: "page-"
-    }
+      chunkNamePrefix: "page-",
+    },
   },
   devServer: {
-    host: "localhost"
-  }
+    host: "localhost",
+  },
 };

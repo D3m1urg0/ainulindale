@@ -15,7 +15,7 @@ import * as AllRules from "@vee-validate/rules";
 
 configure({
   generateMessage: localize({ it }),
-  validity: true
+  validity: true,
 });
 
 setLocale("it");
@@ -24,22 +24,26 @@ const SchemaFormWithPlugins = SchemaFormFactory([
   LookupPlugin({
     mapComponents: {
       string: "form-text",
+      password: "form-text",
+      date: "form-text",
+      mail: "form-text",
+      number: "form-text",
       array: "form-select",
       radio: "form-radio-buttons",
       checkbox: "form-checkbox",
-      textarea: "form-text-area"
+      textarea: "form-text-area",
     },
     mapProps: {
-      type: "component"
-    }
+      type: "component",
+    },
   }),
-  VeeValidatePlugin({})
+  VeeValidatePlugin({}),
 ]);
 
 export default {
-  install: function(app /*, options*/) {
+  install: function (app /*, options*/) {
     app
       .component("schema-form", SchemaFormWithPlugins)
       .component("schema-wizard", SchemaWizard);
-  }
+  },
 };

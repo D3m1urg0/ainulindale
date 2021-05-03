@@ -21,8 +21,8 @@
 // };
 
 export default {
-  install: function(app /*, options*/) {
+  install: function (app /*, options*/) {
     app;
     // app.use(createGtm(gtmConf));
-  }
+  },
 };

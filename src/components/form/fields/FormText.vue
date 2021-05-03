@@ -2,6 +2,7 @@
   <div>
     <label :for="uuid" v-html="labelHtml" class="label" />
     <input
+      class="form-input"
       :type="type"
       :value="modelValue"
       :placeholder="placeholder"
@@ -23,33 +24,33 @@ export default {
     placeholder: String,
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     label: {
       type: String,
-      required: true
+      required: true,
     },
 
     readOnly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     uuid: {
       type: Number,
-      default: 0
+      default: 0,
     },
     validation: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     type: {
       type: String,
-      default: "text"
+      default: "text",
     },
     validations: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
     labelHtml() {
@@ -59,12 +60,12 @@ export default {
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label && this.label + requiredHtml;
-    }
+    },
   },
   methods: {
     update(value) {
       this.$emit("update:modelValue", value);
-    }
-  }
+    },
+  },
 };
 </script>

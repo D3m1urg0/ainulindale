@@ -23,7 +23,7 @@
       fill="none"
       viewBox="0 0 10 24"
       stroke="currentColor"
-      class=" flex-none h-10 my-auto cursor-pointer"
+      class="flex-none h-10 my-auto cursor-pointer"
       :class="{ 'md:hidden': mobileOnly }"
     >
       <path
@@ -40,8 +40,8 @@
 export default {
   props: {
     mobileOnly: Boolean,
-    uid: { required: true }
-  }
+    uid: { required: true },
+  },
 };
 </script>
 
