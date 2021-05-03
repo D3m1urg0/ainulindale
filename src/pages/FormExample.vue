@@ -19,19 +19,19 @@ export default {
                 component: "form-select", //FormText,
                 label: "Schema A or B?",
                 options: ["A", "B"],
-                model: "type"
+                model: "type",
               },
               {
                 component: "form-text",
                 label: "A field",
-                model: "aField"
+                model: "aField",
               },
               {
                 component: "form-text",
                 label: "A field",
-                model: "aField"
-              }
-            ]
+                model: "aField",
+              },
+            ],
           ]
         : [
             [
@@ -39,20 +39,20 @@ export default {
                 component: "form-select", //FormText,
                 label: "Schema A or B?",
                 options: ["A", "B"],
-                model: "type"
+                model: "type",
               },
               {
                 component: "form-text",
                 label: "b field",
-                model: "bField"
-              }
-            ]
+                model: "bField",
+              },
+            ],
           ];
     });
     return {
       schema,
-      formData
+      formData,
     };
-  }
+  },
 };
 </script>

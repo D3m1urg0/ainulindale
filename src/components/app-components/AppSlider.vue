@@ -6,7 +6,7 @@
         v-bind="$attrs"
         :navigation="{
           prevEl: `#prev-caret-${key}`,
-          nextEl: `#next-caret-${key}`
+          nextEl: `#next-caret-${key}`,
         }"
       >
         <swiper-slide v-for="(item, i) in [...items]" :key="i">
@@ -21,6 +21,6 @@
 import { v4 as uuidv4 } from "uuid";
 
 export default {
-  props: { items: { required: true }, key: { default: uuidv4() } }
+  props: { items: { required: true }, key: { default: uuidv4() } },
 };
 </script>

@@ -11,8 +11,8 @@ const plugins = require.context(
   /^.\/[^_]\S+\.(vue|js)$/
 );
 
-const using = function(app /*, options*/) {
-  plugins.keys().forEach(name => {
+const using = function (app /*, options*/) {
+  plugins.keys().forEach((name) => {
     const plugin = plugins(name).default;
     app.use(plugin);
   });

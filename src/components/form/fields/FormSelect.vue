@@ -23,27 +23,27 @@ export default {
     placeholder: String,
     required: {
       type: Boolean,
-      default: false
+      default: false,
     },
     config: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     uuid: {
       type: Number,
-      default: 0
+      default: 0,
     },
     label: { type: String, required: true },
     options: { type: Array, required: true },
     disableNoSelection: { type: Boolean, default: false },
     validation: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     validations: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   computed: {
     labelHtml() {
@@ -53,14 +53,14 @@ export default {
           ? ' <span class="label--required">*</span>'
           : "";
       return this.label && this.label + requiredHtml;
-    }
+    },
   },
   methods: {
     update(value) {
       console.log(value);
       this.$emit("update:modelValue", value);
-    }
-  }
+    },
+  },
 };
 </script>
 

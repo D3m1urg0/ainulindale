@@ -1,7 +1,7 @@
 // import VueGapi from "vue-gapi";
 
 export default {
-  install: function(app /*, options*/) {
+  install: function (app /*, options*/) {
     app;
     //     app.use(VueGapi, {
     //       apiKey: "",
@@ -11,5 +11,5 @@ export default {
     //       ]
     //       //   scope: "https://www.googleapis.com/auth/youtube.readonly"
     //     });
-  }
+  },
 };
