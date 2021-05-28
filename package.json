@@ -57,6 +57,7 @@
     "prettier": "^2.2.1",
     "tailwind-scrollbar": "^1.2.4",
     "tailwindcss": "^2.0.4",
+    "tailwindcss-touch": "^1.0.1",
     "vue-auto-routing": "^1.0.0",
     "vue-cli-plugin-auto-routing": "^1.2.0",
     "vue-cli-plugin-axios": "~0.0.4",
