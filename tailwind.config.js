@@ -3,7 +3,8 @@ const lighen = (clr, val) => Color(clr).lighten(val).rgb().string();
 const darken = (clr, val) => Color(clr).darken(val).rgb().string();
 
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{html,css,vue,js,ts,jsx,tsx}"],
+  mode: "jit",
+  purge: ["./public/**/*.html", "./src/**/*.{html,css,js,jsx,ts,tsx,vue}"],
   theme: {
     container: {
       center: true,
