@@ -2,9 +2,7 @@
 @tailwind base;
 
 @layer base {
-  @layer base {
     @import url("./forms.css");
-  }
 }
 
 @tailwind components;
