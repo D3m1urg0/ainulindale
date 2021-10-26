@@ -10,6 +10,7 @@
   "dependencies": {
     "@formvuelate/plugin-lookup": "^3.4.0",
     "@formvuelate/plugin-vee-validate": "^3.4.0",
+    "@googlemaps/js-api-loader": "^1.12.7",
     "@gtm-support/vue-gtm": "^1.1.0",
     "@suadelabs/vue3-multiselect": "^1.0.2",
     "@vee-validate/i18n": "^4.4.7",

@@ -31,10 +31,7 @@ export default {
       type: Object,
       default: () => {},
     },
-    uuid: {
-      type: Number,
-      default: 0,
-    },
+
     label: String,
     options: [Boolean, Array],
     validation: {
